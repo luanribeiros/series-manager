@@ -9,9 +9,8 @@
   "private": true,
   "scripts": {
     "lint": "./node_modules/.bin/eslint",
-    "prepush": "yarn run lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "prepush": "yarn run lint"
+},
   "devDependencies": {
     "eslint": "^4.18.0",
     "eslint-config-airbnb-base": "^12.1.0",
