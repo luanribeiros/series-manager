@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "lint": "./node_modules/.bin/eslint",
-    "prepush": "npm run lint",
+    "prepush": "yarn run lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
