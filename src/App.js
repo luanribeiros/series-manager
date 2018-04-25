@@ -10,7 +10,7 @@ class App extends Component {
     }
   }
   componentDidMount() {
-    axios.get('http://localhost:3001/genres')
+    axios.get()
       .then((res) => {
         console.log(res)
       })
