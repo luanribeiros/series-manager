@@ -24,6 +24,11 @@ class App extends Component {
       })
   }
 
+  renderGenreLink(genre) {
+    return (
+      <a href=''>{genre}</a>
+    )
+  }
   render() {
     return (
       <div className="App">
@@ -66,7 +71,7 @@ class App extends Component {
             !this.state.isLoading && 
             <div> 
               Ver séries do gênero:
-              {JSON.stringify(this.state.genres)}
+              { this.state.genres.map(this.renderGenreLink)}
             </div>
           }
         </section>
