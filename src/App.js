@@ -1,6 +1,21 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      count: 0
+    }
+  }
+  componentDidMount() {
+    axios.get('http://localhost:3001/genres')
+      .then((res) => {
+        console.log(res)
+      })
+  }
+
   render() {
     return (
       <div className="App">
