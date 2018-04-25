@@ -7,4 +7,4 @@ render(
   <App />, 
   document.querySelector('[data-js="root"]')
 );
-registerServiceWorker();
+registerServiceWorker()
