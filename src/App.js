@@ -1,19 +1,26 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { loadGenres } from './Api'
+import Api from './Api'
 
 class App extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      count: 0
+      genres: [],
+      isLoading: false
     }
   }
   componentDidMount() {
-    loadGenres()
+    this.setState({
+      isLoading: true
+    })
+    Api.loadGenres()
       .then((res) => {
-        console.log(res)
+        this.setState({
+          isLoading: false,
+          genres: res.data
+        })
       })
   }
 
@@ -49,6 +56,19 @@ class App extends Component {
               </div>
             </div>
           </div>
+        </section>
+
+        <section>
+          {
+            this.state.isLoading && <span> Agaurde, carregando...</span>
+          }
+          {
+            !this.state.isLoading && 
+            <div> 
+              Ver séries do gênero:
+              {JSON.stringify(this.state.genres)}
+            </div>
+          }
         </section>
       </div>
     )
