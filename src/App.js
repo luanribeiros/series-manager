@@ -26,7 +26,7 @@ class App extends Component {
 
   renderGenreLink(genre) {
     return (
-      <a href=''>{genre}</a>
+      <span>&nbsp;<a href=''>{genre}</a>&nbsp;</span>
     )
   }
   render() {
