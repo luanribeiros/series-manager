@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { loadGenres } from './Api'
 
 class App extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class App extends Component {
     }
   }
   componentDidMount() {
-    axios.get()
+    loadGenres()
       .then((res) => {
         console.log(res)
       })
