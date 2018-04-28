@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 import Home from './Home'
 import About from './About'
+import NewSeries from './NewSeries'
 
 class App extends Component {
   render() {
@@ -25,6 +26,9 @@ class App extends Component {
                   <li>
                     <Link to="/about"> Sobre </Link>
                   </li>
+                  <li>
+                    <Link to="/new"> Nova Serie </Link>
+                  </li>
                 </ul>
               </div>
         
@@ -32,6 +36,7 @@ class App extends Component {
           </nav>
           <Route exact path='/' component={Home} />
           <Route exact path='/about' component={About} />
+          <Route exact path='/new' component={NewSeries} />
         </div>
       </Router>
     )
