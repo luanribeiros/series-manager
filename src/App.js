@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 import Home from './Home'
+import About from './About'
 
 class App extends Component {
   render() {
@@ -19,7 +20,10 @@ class App extends Component {
               <div className="collapse navbar-collapse navbar-ex1-collapse">
                 <ul className="nav navbar-nav">
                   <li>
-                    <a href="">Menu item</a>
+                    <Link to="/"> Menu item </Link>
+                  </li>
+                  <li>
+                    <Link to="/about"> Sobre </Link>
                   </li>
                 </ul>
               </div>
