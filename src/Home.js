@@ -1,6 +1,36 @@
 import React, { Component } from 'react'
 
+import Api from './Api'
+
 class Home extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      genres: [],
+      isLoading: false
+    }
+  }
+
+  componentDidMount() {
+    this.setState({
+      isLoading: true
+    })
+    Api.loadGenres()
+      .then((res) => {
+        this.setState({
+          isLoading: false,
+          genres: res.data
+        })
+      })
+  }
+
+  renderGenreLink(genre) {
+    return (
+      <span>&nbsp;<a href=''>{genre}</a>&nbsp;</span>
+    )
+  }
+
   render() {
     return(
       <div>

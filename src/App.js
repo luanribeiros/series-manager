@@ -1,35 +1,9 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import Api from './Api'
+import Home from './Home'
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      genres: [],
-      isLoading: false
-    }
-  }
-  componentDidMount() {
-    this.setState({
-      isLoading: true
-    })
-    Api.loadGenres()
-      .then((res) => {
-        this.setState({
-          isLoading: false,
-          genres: res.data
-        })
-      })
-  }
-
-  renderGenreLink(genre) {
-    return (
-      <span>&nbsp;<a href=''>{genre}</a>&nbsp;</span>
-    )
-  }
   render() {
     return (
       <Router>
@@ -52,6 +26,7 @@ class App extends Component {
         
             </div>
           </nav>
+          <Home />
         </div>
       </Router>
     )
