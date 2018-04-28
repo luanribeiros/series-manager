@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+
 import Api from './Api'
 
 class App extends Component {
@@ -64,7 +66,7 @@ class App extends Component {
 
         <section>
           {
-            this.state.isLoading && <span> Agaurde, carregando...</span>
+            this.state.isLoading && <span> Aguarde, carregando...</span>
           }
           {
             !this.state.isLoading && 
