@@ -24,10 +24,10 @@ class App extends Component {
                     <Link to="/"> Menu item </Link>
                   </li>
                   <li>
-                    <Link to="/about"> Sobre </Link>
+                    <Link to="/new"> Nova Série </Link>
                   </li>
                   <li>
-                    <Link to="/new"> Nova Serie </Link>
+                    <Link to="/about"> Sobre </Link>
                   </li>
                 </ul>
               </div>
