@@ -45,7 +45,7 @@ class NewSeries extends Component {
             {
               Object
                 .keys(statuses)
-                .map( key => <option value={key}> {statuses[key]}</option>)
+                .map( key => <option key={key} value={key}> {statuses[key]}</option>)
             }
           </select><br />
           
@@ -54,7 +54,7 @@ class NewSeries extends Component {
             {
               Object
                 .keys(statuses)
-                .map( key => <option value={key}> {statuses[key]}</option>)
+                .map( key => <option key={key} value={key}> {statuses[key]}</option>)
             }
           </select><br />
 
