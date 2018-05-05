@@ -28,7 +28,7 @@ class Home extends Component {
 
   renderGenreLink(genre) {
     return (
-      <span key={genre}>&nbsp;<Link href=''>{genre}</Link>&nbsp;</span>
+      <span key={genre}>&nbsp;<Link to={`/series/${genre}`}>{genre}</Link>&nbsp;</span>
     )
   }
 
