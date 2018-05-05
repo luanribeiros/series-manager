@@ -42,6 +42,8 @@ class NewSeries extends Component {
       comments: this.refs.comments.value
     }
     Object.freeze(NewSeries)
+    Api.saveSeries(NewSeries)
+      .then((res) => console.log(res))
   }
 
   render () {
