@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 import Home from './Home'
 import About from './About'
+import Series from './Series'
 import NewSeries from './NewSeries'
 
 class App extends Component {
@@ -35,6 +36,7 @@ class App extends Component {
             </div>
           </nav>
           <Route exact path='/' component={Home} />
+          <Route path='/series/:genre' component={Series} />
           <Route exact path='/about' component={About} />
           <Route exact path='/new' component={NewSeries} />
         </div>
