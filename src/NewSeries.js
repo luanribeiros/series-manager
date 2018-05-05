@@ -35,8 +35,13 @@ class NewSeries extends Component {
   }
 
   saveSeries() {
-    alert(this.refs.name.value)
-    return false
+    const NewSeries = {
+      name: this.refs.name.value,
+      status: this.refs.status.value,
+      genre: this.refs.genre.value,
+      comments: this.refs.comments.value
+    }
+    Object.freeze(NewSeries)
   }
 
   render () {
@@ -64,7 +69,7 @@ class NewSeries extends Component {
           </select><br />
 
           <label for="area">Comentários: </label>
-          <textarea type="textarea" id="area" ref='textarea' className="form-control">
+          <textarea type="textarea" id="area" ref='comments' className="form-control">
           </textarea><br />
           <button type="button" onClick={this.saveSeries}> Salvar </button>
         </form>
