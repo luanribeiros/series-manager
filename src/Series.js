@@ -1,6 +1,14 @@
 import React, { Component } from 'react'
 
 class Series extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      isLoading: false,
+      series: []
+    }
+  }
   renderSeries() {
     return (
       <div className="item  col-xs-4 col-lg-4">
