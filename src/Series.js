@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Api from './Api'
 
 class Series extends Component {
   constructor(props) {
@@ -9,6 +10,18 @@ class Series extends Component {
       series: []
     }
   }
+
+  componentDidMount() {
+    this.setState({ isLoading: true })
+    Api.loadSeriesByGenre(this.props.match.params.genre)
+      .then((res) => {
+        this.setState({
+          isLoading: false,
+          series: res.data
+        })
+      })
+  }
+
   renderSeries() {
     return (
       <div className="item  col-xs-4 col-lg-4">
