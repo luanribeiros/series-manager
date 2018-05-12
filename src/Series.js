@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 import Api from './Api'
 
+const statuses = {
+  'watched': 'Assistindo',
+  'watching': 'Assistindo',
+  'watch': 'Assistir'
+}
+
 class Series extends Component {
   constructor(props) {
     super(props)
@@ -33,7 +39,7 @@ class Series extends Component {
             <div className="row">
               <div className="col-xs-12 col-md-6">
                 <p className="lead">
-                  { series.genre }</p>
+                  { series.genre } / {statuses[series.status]}</p>
               </div>
               <div className="col-xs-12 col-md-6">
                 <a className="btn btn-success" href="">Gerenciar</a>
