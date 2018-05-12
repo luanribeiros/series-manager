@@ -22,18 +22,18 @@ class Series extends Component {
       })
   }
 
-  renderSeries() {
+  renderSeries(series) {
     return (
       <div className="item  col-xs-4 col-lg-4">
         <div className="thumbnail">
           <img className="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
           <div className="caption">
             <h4 className="group inner list-group-item-heading">
-              How I met your mother</h4>
+              { series.name }</h4>
             <div className="row">
               <div className="col-xs-12 col-md-6">
                 <p className="lead">
-                  AÇÃO</p>
+                  { series.genre }</p>
               </div>
               <div className="col-xs-12 col-md-6">
                 <a className="btn btn-success" href="">Gerenciar</a>
