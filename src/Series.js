@@ -51,7 +51,9 @@ class Series extends Component {
           <h1> Series {this.props.match.params.genre}</h1>
 
           <div id="series" className="row list-group">
-            { this.renderSeries()}
+            { !this.state.isLoading && 
+              this.state.series.map(this.renderSeries)
+            }
           </div>
         </section>
     )
