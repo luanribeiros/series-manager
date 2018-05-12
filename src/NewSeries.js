@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
 
 import Api from './Api'
 
@@ -15,7 +16,8 @@ class NewSeries extends Component {
 
     this.state = {
       genres: [],
-      isLoading: false
+      isLoading: false,
+      redirect: false
     }
 
     this.saveSeries = this.saveSeries.bind(this)
@@ -43,12 +45,19 @@ class NewSeries extends Component {
     }
     Object.freeze(NewSeries)
     Api.saveSeries(NewSeries)
-      .then((res) => console.log(res))
+      .then((res) => {
+        this.setState({
+          redirect: '/series/'+this.refs.genre.value
+        })
+      })
   }
 
   render () {
     return (
-      <section className="intro-section"> 
+      <section className="intro-section">
+        { this.state.redirect && 
+          <Redirect to={this.state.redirect} /> 
+        } 
         <h1> Nova série </h1>
         <form>
           <label for="name">Nome: </label>
