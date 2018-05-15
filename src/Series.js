@@ -17,7 +17,7 @@ class Series extends Component {
     }
 
     this.renderSeries = this.renderSeries.bind(this)
-
+    this.loadData = this.loadData.bind(this)
   }
 
   componentDidMount() {
