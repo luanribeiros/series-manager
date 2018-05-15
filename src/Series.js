@@ -15,6 +15,9 @@ class Series extends Component {
       isLoading: false,
       series: []
     }
+
+    this.renderSeries = this.renderSeries.bind(this)
+
   }
 
   componentDidMount() {
@@ -28,6 +31,9 @@ class Series extends Component {
       })
   }
 
+  deleteSeries(id) {
+
+  }
   renderSeries(series) {
     return (
       <div className="item  col-xs-4 col-lg-4">
@@ -43,7 +49,7 @@ class Series extends Component {
               </div>
               <div className="col-xs-12 col-md-6">
                 <a className="btn btn-success" href="">Gerenciar</a>
-                <a className="btn btn-success" href="">Excluir</a>
+                <a className="btn btn-success" href="" onClick={ }>Excluir</a>
                 </div>
             </div>
           </div>
