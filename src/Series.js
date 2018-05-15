@@ -37,7 +37,7 @@ class Series extends Component {
 
   deleteSeries(id) {
     Api.deleteSeries(id)
-      .then((res) => console.log(res))
+      .then((res) => this.loadData())
   }
 
   renderSeries(series) {
