@@ -21,6 +21,10 @@ class Series extends Component {
   }
 
   componentDidMount() {
+    this.loadData()
+  }
+
+  loadData() {
     this.setState({ isLoading: true })
     Api.loadSeriesByGenre(this.props.match.params.genre)
       .then((res) => {
@@ -35,7 +39,7 @@ class Series extends Component {
     Api.deleteSeries(id)
       .then((res) => console.log(res))
   }
-  
+
   renderSeries(series) {
     return (
       <div className="item  col-xs-4 col-lg-4">
