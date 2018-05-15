@@ -43,7 +43,8 @@ class Series extends Component {
               </div>
               <div className="col-xs-12 col-md-6">
                 <a className="btn btn-success" href="">Gerenciar</a>
-              </div>
+                <a className="btn btn-success" href="">Excluir</a>
+                </div>
             </div>
           </div>
         </div>
