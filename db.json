@@ -1,5 +1,27 @@
 {
-  "series": [],
+  "series": [
+    {
+      "name": "Testando 1",
+      "status": "Comédia",
+      "genre": "Comédia",
+      "comments": "Testando 1",
+      "id": 1
+    },
+    {
+      "name": "Testando 2",
+      "status": "Comédia",
+      "genre": "Comédia",
+      "comments": "Testando 2",
+      "id": 2
+    },
+    {
+      "name": "Testando 3",
+      "status": "Comédia",
+      "genre": "Comédia",
+      "comments": "Testando 3",
+      "id": 3
+    }
+  ],
   "genres": [
     "Comédia",
     "Drama",

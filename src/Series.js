@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Api from './Api'
 
 const statuses = {
-  'watched': 'Assistindo',
+  'watched': 'Assisti',
   'watching': 'Assistindo',
   'watch': 'Assistir'
 }
@@ -55,7 +55,7 @@ class Series extends Component {
               </div>
               <div className="col-xs-12 col-md-6">
                 <a className="btn btn-success" href="">Gerenciar</a>
-                <a className="btn btn-success" href="" onClick={ this.deleteSeries(series.id) }>Excluir</a>
+                <a className="btn btn-success" href="" onClick={ () => this.deleteSeries(series.id) }>Excluir</a>
               </div>
             </div>
           </div>
