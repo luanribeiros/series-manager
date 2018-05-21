@@ -5,6 +5,7 @@ import Home from './Home'
 import About from './About'
 import Series from './Series'
 import NewSeries from './NewSeries'
+import EditSeries from './EditSeries'
 
 class App extends Component {
   render() {
@@ -36,9 +37,9 @@ class App extends Component {
             </div>
           </nav>
           <Route exact path='/' component={Home} />
+          <Route path='/series-edit/:id' component={EditSeries} />
           <Route path='/series/:genre' component={Series} />
-          <Route path='series/edit/:id' component={EditSeries} />
-          <Route exact path='/about' component={About} />
+          <Route exact path='/about' component={About} /> 
           <Route exact path='/new' component={NewSeries} />
         </div>
       </Router>

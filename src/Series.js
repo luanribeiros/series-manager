@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Api from './Api'
+import { Link } from 'react-router-dom'
 
 const statuses = {
   'watched': 'Assisti',
@@ -42,7 +43,7 @@ class Series extends Component {
 
   renderSeries(series) {
     return (
-      <div className="item  col-xs-4 col-lg-4">
+      <div key={series.id} className="item  col-xs-4 col-lg-4">
         <div className="thumbnail">
           <img className="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
           <div className="caption">
@@ -54,8 +55,8 @@ class Series extends Component {
                   { series.genre } / {statuses[series.status]}</p>
               </div>
               <div className="col-xs-12 col-md-6">
-                <a className="btn btn-success" href="">Editar</a>
-                <a className="btn btn-success" href="" onClick={ () => this.deleteSeries(series.id) }>Excluir</a>
+                <Link className="btn btn-success" to={'/series-edit/'+series.id}>Editar</Link>
+                <a className="btn btn-success" onClick={ () => this.deleteSeries(series.id) }>Excluir</a>
               </div>
             </div>
           </div>
