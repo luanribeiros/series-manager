@@ -73,7 +73,7 @@ class Series extends Component {
             <p> Carregando, aguarde ... </p>
           }
           { 
-            this.state.series.length === 0 && 
+            !this.state.isLoading && this.state.series.length === 0 && 
             <div className='alert alert-info'> Nenhuma série cadastrada.</div>
           }
           <div id="series" className="row list-group">
