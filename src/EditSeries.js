@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom'
 import Api from './Api'
 
 const statuses = {
-  'watched': 'Assistindo',
+  'watched': 'Assisti',
   'watching': 'Assistindo',
   'watch': 'Assistir'
 }
@@ -45,15 +45,16 @@ class EditSeries extends Component {
       })
   }
 
-  saveSeries() {
+  saveSeries() { 
     const NewSeries = {
+      id: this.props.match.params.id,
       name: this.refs.name.value,
       status: this.refs.status.value,
       genre: this.refs.genre.value,
       comments: this.refs.comments.value
     }
     Object.freeze(NewSeries)
-    Api.saveSeries(NewSeries)
+    Api.updateSeries(NewSeries)
       .then((res) => {
         this.setState({
           redirect: '/series/'+this.refs.genre.value
@@ -75,8 +76,9 @@ class EditSeries extends Component {
           <label>Status</label>
           <select ref='status'>
             {
-              this.state.genres
-                .map( key => <option key={key} value={key}> {key}</option>)
+              Object
+                .keys(statuses)
+                .map( key => <option key={key} value={key}> {statuses[key] }</option>)
             }
           </select><br />
           

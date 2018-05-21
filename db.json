@@ -2,16 +2,16 @@
   "series": [
     {
       "id": 3,
-      "name": "Breaking Bad",
-      "status": "watched",
+      "name": "Breaking Bad 2",
+      "status": "watching",
       "genre": "Drama",
       "comments": "Say My Name - melhor cena"
     },
     {
       "id": 4,
       "name": "Better Call Saul",
-      "status": "toWatch",
-      "genre": "Drama",
+      "status": "watch",
+      "genre": "Comédia",
       "comments": "Galera fala bem"
     }
   ],

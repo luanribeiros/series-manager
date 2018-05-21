@@ -66,8 +66,9 @@ class NewSeries extends Component {
           <label>Status</label>
           <select ref='status'>
             {
-              this.state.genres
-                .map( key => <option key={key} value={key}> {key}</option>)
+              Object
+                .keys(statuses)
+                .map( key => <option key={key} value={key}> {statuses[key] }</option>)
             }
           </select><br />
           
