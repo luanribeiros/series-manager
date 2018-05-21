@@ -68,7 +68,14 @@ class Series extends Component {
     return (
         <section id="intro" className="intro-section">
           <h1> Series {this.props.match.params.genre}</h1>
-
+          { 
+            this.state.isLoading && 
+            <p> Carregando, aguarde ... </p>
+          }
+          { 
+            this.state.series.length === 0 && 
+            <div className='alert alert-info'> Nenhuma série cadastrada.</div>
+          }
           <div id="series" className="row list-group">
             { !this.state.isLoading && 
               this.state.series.map(this.renderSeries)

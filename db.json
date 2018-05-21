@@ -13,13 +13,6 @@
       "genre": "Comédia",
       "comments": "Testando 2",
       "id": 2
-    },
-    {
-      "name": "Testando 3",
-      "status": "Comédia",
-      "genre": "Comédia",
-      "comments": "Testando 3",
-      "id": 3
     }
   ],
   "genres": [
