@@ -13,6 +13,13 @@
       "status": "watch",
       "genre": "Comédia",
       "comments": "Galera fala bem"
+    },
+    {
+      "id": 5,
+      "name": "Testando 2",
+      "status": "watched",
+      "genre": "Drama",
+      "comments": "Testando 2"
     }
   ],
   "genres": [

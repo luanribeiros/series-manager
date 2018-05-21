@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom'
 import Api from './Api'
 
 const statuses = {
-  'watched': 'Assistindo',
+  'watched': 'Assisti',
   'watching': 'Assistindo',
   'watch': 'Assistir'
 }
